@@ -1,0 +1,25 @@
+{
+	"name": "group-2",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"start": "nodemon index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JoshHallRVA/group-2.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/JoshHallRVA/group-2/issues"
+	},
+	"homepage": "https://github.com/JoshHallRVA/group-2#readme"
+}
