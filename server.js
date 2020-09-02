@@ -19,6 +19,7 @@ app.use(express.static("public"));
 
 // require("./routes/apiRoutes")(app);
 require("./app/routes/htmlRoutes.js")(app);
+require("./app/routes/apiRoutes.js")(app);
 
 app.get("/sign-s3", (req, res) => {
 	const s3 = new aws.S3();
