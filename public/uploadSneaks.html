@@ -68,10 +68,22 @@
 					</ul>
 				</div>
 			</div>
-    </nav>
+	</nav>
+	
+	<input type="file" id="file-input">
+<p id="status">Please select a file</p>
+<img id="preview" src="/images/default.png">
+
+<form method="POST" action="/save-details">
+  <input type="hidden" id="avatar-url" name="avatar-url" value="/images/default.png">
+  <input type="text" name="username" placeholder="Username"><br>
+  <input type="text" name="full-name" placeholder="Full name"><br><br>
+  <input type="submit" value="Update profile">
+</form>
     
 
 		<div class="container">
+	
 			<form class="form-horizontal" action="/action_page.php">
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="name">Name:</label>
@@ -139,5 +151,7 @@
 				<button type="button" class="btn btn-danger">Sign Up</button>
 			</form>
 		</footer>
+
+		<script src="./assets/js/uploadSneaks.js"></script>
 	</body>
 </html>
