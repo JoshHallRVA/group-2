@@ -20,8 +20,6 @@ app.use(express.static("public"));
 // require("./routes/apiRoutes")(app);
 require("./app/routes/htmlRoutes.js")(app);
 
-app.use(bodyParser.urlencoded({ extended: false }));
-
 app.get("/sign-s3", (req, res) => {
 	const s3 = new aws.S3();
 	const fileName = req.query["file-name"];
