@@ -1,19 +1,33 @@
-const path = require("path");
+// ===============================================================================
+// DEPENDENCIES
+// We need to include the path package to get the correct file path for our html
+// ===============================================================================
+var path = require("path");
+
+// ===============================================================================
+// ROUTING
+// ===============================================================================
 
 module.exports = function (app) {
-	app.get("/", function (req, res) {
-		res.sendFile(path.join(__dirname, "../public/index.html"));
+	// HTML GET Requests
+	// Below code handles when users "visit" a page.
+	// In each of the below cases the user is shown an HTML page of content
+	// ---------------------------------------------------------------------------
+
+	app.get("/tables", function (req, res) {
+		res.sendFile(path.join(__dirname, "../public/tables.html"));
 	});
-	app.get("/sneaks", function (req, res) {
-		res.sendFile(path.join(__dirname, "../public/uploadSneaks.html"));
+
+	app.get("/reserve", function (req, res) {
+		res.sendFile(path.join(__dirname, "../public/reserve.html"));
 	});
-	app.get("/forSale", function (req, res) {
-		res.sendFile(path.join(__dirname, "../public/forSale.html"));
-	});
-	app.get("/assets", function (req, res) {
-		res.sendFile(path.join(__dirname, "../public/assets.html"));
-	});
+
 	app.get("/resources", function (req, res) {
 		res.sendFile(path.join(__dirname, "../public/resources.html"));
+	});
+
+	// If no matching route is found default to home
+	app.get("*", function (req, res) {
+		res.sendFile(path.join(__dirname, "../public/home.html"));
 	});
 };

@@ -1,6 +1,7 @@
+var bodyParser = require("body-parser");
 var express = require("express");
-require("dotenv").config();
 var path = require("path");
+require("dotenv").config();
 
 const aws = require("aws-sdk");
 aws.config.region = "us-east-2";
@@ -13,13 +14,13 @@ var app = express();
 
 var PORT = process.env.PORT || 8080;
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(bodyParser.json());
 
 // require("./routes/apiRoutes")(app);
-require("./app/routes/htmlRoutes.js")(app);
-require("./app/routes/apiRoutes.js")(app);
+require("./app/routes/apiRoutes")(app);
+require("./app/routes/htmlRoutes")(app);
 
 app.get("/sign-s3", (req, res) => {
 	const s3 = new aws.S3();
