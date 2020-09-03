@@ -14,7 +14,7 @@ const S3_BUCKET = process.env.S3_BUCKET;
 
 var app = express();
 
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -22,6 +22,8 @@ app.use(express.static("public"));
 
 // require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes.js")(app);
+
+app.get('/sneaks', (req, res) => res.render('uploadSneaks.html'));
 
 app.get('/sign-s3', (req, res) => {
 	const s3 = new aws.S3();
