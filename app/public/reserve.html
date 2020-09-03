@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>HypeBeast</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="index.html" />
+		<link rel="stylesheet" href="forSale.html" />
+		<link rel="stylesheet" href="resources.html" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<div class="jumbotron">
+			<div class="container text-center">
+				<h1>
+					<img
+						src="https://fontmeme.com/permalink/200827/6de3b13b6bc34814bd6ae29dbc037e4e.png"
+						alt="logo"
+					/>
+				</h1>
+				<p>Your Sneakerhead Headquarters</p>
+			</div>
+		</div>
+
+		<nav
+			class="navbar navbar-inverse"
+			style="background-color: #3e4551"
+		>
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button
+						type="button"
+						class="navbar-toggle"
+						data-toggle="collapse"
+						data-target="#myNavbar"
+					>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div
+					class="collapse navbar-collapse"
+					id="myNavbar"
+					style="background-color: #3e4551"
+				>
+					<ul class="nav navbar-nav">
+						<li class="active"
+							><a href="/" style="background-color: #3e4551"
+								>Home</a
+							></li
+						>
+						<li><a href="/tables">For Sale</a></li>
+						<li><a href="/reserve">Upload Sneakers</a></li>
+						<li><a href="/resources">Resources</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+					
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="card">
+				<div class="card-header"> Sell Your Shoes!</div>
+				<div class="card-body">
+					<form role="form">
+						<div class="form-group">
+							<label for="reserve-name">Name</label>
+							<input
+								type="text"
+								class="form-control"
+								id="reserve-name"
+							/>
+						</div>
+						<div class="form-group">
+							<label for="reserve-phone">Phone Number</label>
+							<input
+								type="text"
+								class="form-control"
+								id="reserve-phone"
+							/>
+						</div>
+						<div class="form-group">
+							<label for="reserve-email">Email</label>
+							<input
+								type="text"
+								class="form-control"
+								id="reserve-email"
+							/>
+						</div>
+						<div class="form-group">
+							<label for="reserve-unique-id">Unique ID</label>
+							<input
+								type="text"
+								class="form-control"
+								id="reserve-unique-id"
+							/>
+						</div>
+						<button type="submit" class="btn btn-primary submit"
+							>Submit</button
+						>
+					</form>
+					<input type="file" id="file-input" />
+					<p id="status">Please select a file</p>
+				</div>
+			</div>
+			
+				</div>
+			</div>
+		</div>
+
+		<script src="./assets/js/uploadSneaks.js"></script>
+	</body>
+</html>
+
+<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<script type="text/javascript">
+	// In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+	// In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+	// Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
+	// In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+
+	$(".submit").on("click", function (event) {
+		event.preventDefault();
+
+		// Here we grab the form elements
+		var newReservation = {
+			customerName: $("#reserve-name").val().trim(),
+			phoneNumber: $("#reserve-phone").val().trim(),
+			customerEmail: $("#reserve-email").val().trim(),
+			customerID: $("#reserve-unique-id").val().trim(),
+		};
+
+		console.log(newReservation);
+
+		// This line is the magic. It"s very similar to the standard ajax function we used.
+		// Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+		// The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+		// depending on if a tables is available or not.
+
+		$.post("/api/tables", newReservation, function (data) {
+			// If a table is available... tell user they are booked.
+			if (data) {
+				alert("Yay! You are now a HypeBeast!");
+			}
+
+			// If a table is available... tell user they on the waiting list.
+			else {
+				alert("Sorry you are on the wait list");
+			}
+
+			// Clear the form when submitting
+			$("#reserve-name").val("");
+			$("#reserve-phone").val("");
+			$("#reserve-email").val("");
+			$("#reserve-unique-id").val("");
+		});
+	});
+</script>
