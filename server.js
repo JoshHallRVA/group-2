@@ -12,11 +12,12 @@ const S3_BUCKET = process.env.S3_BUCKET;
 
 var app = express();
 
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3030;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
+app.use(express.static("./app/public/"));
 
 // require("./routes/apiRoutes")(app);
 require("./app/routes/apiRoutes")(app);
