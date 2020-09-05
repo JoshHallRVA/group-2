@@ -21,7 +21,7 @@
 						alt="Hypebeast logo"
 					/>
 				</h1>
-				<p class="tagline">Your Sneakerhead Headquarters</p>
+				<p style="color: #1a237e;">Your Sneakerhead Headquarters</p>
 			</div>
 		</div>
 
@@ -41,28 +41,52 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="/">Home</a></li>
+						<li style="background-color: #3e4551"><a href="/">Home</a></li>
 						<li><a href="/tables">For Sale</a></li>
 						<li><a href="/reserve">Upload Sneaks</a></li>
-						<li><a href="/resources">Resources</a></li>
+						<!-- <li><a href="/resources">Resources</a></li> -->
 					</ul>
-					<ul class="nav navbar-nav navbar-right">			
+					<ul class="nav navbar-nav navbar-right">				
+					<li>
+						<a href="#"
+							><span class="glyphicon glyphicon-user"></span> Your Account</a
+						>
+					</li>
+					<li>
+						<a href="#"
+							><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a
+						>
+					</li>
 					</ul>
 				</div>
 			</div>
-    </nav>
+		</nav>
+		
+		<style>
+			.carousel-inner {
+				width:100%;
+				max-height:1000px;
+				padding : 7% 10% 
+			}
+		</style>	
     
 		<div id="myCarousel" class="carousel slide container" data-ride="carousel" style="background-color: #3e4551">
 				<!-- Indicators -->
 				<ol class="carousel-indicators">
 					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
 				</ol>
 
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
-						<img  class="overkill" style="width:100%" style="height: fit-content" src="/images/R1-Overkill-Firestarter.jpg" alt="Overkill sneakers on steps">
+						<img 
+						 class="overkill" style="width:100%"
+						 style="height:fit-content"
+							src="./images/R1-Overkill-Firestarter.jpg" 
+							alt="Overkill sneakers on steps"
+						/>
 						<div class="carousel-caption">
 							<h3>Sell Your Treasures</h3>
 							<p>Make Money $$$</p>
@@ -70,7 +94,13 @@
 					</div>
 
 					<div class="item">
-						<img class="overkill" style="width:100%" style="height:fit-content"  src="/images/craig_sager.jpeg" alt="Craig Sager sneakers"/>
+						<img
+							class="overkill"
+							style="width:100%" 
+							style="height:fit-content" 
+							src="./images/craig_sager.jpeg" 
+							alt="Craig Sager sneakers"
+						/>
 						<div class="carousel-caption">
 							<h3>Rare Finds: Craig Sager Air Jordan 1</h3>
 							<h5><strong>$15,000 USD </strong></h5>			
@@ -78,12 +108,16 @@
 					</div>
 				
 					<div class="item">
-						<img class="overkill" style="width:100%" style="height:fit-content"  src=".\images\Sneaker Conference.jpg" alt="Craig Sager sneakers"/>
+						<img 
+						class="overkill"
+						 style="width:100%" 
+						 style="height:fit-content" 
+						 src=".\images\Sneaker Conference.jpg"
+						 alt="Craig Sager sneakers"
+					 />		
 					</div>
+				</div>						
 				
-
-						
-				</div>
 				<!-- Left and right controls -->
 				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
 					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -93,7 +127,7 @@
 					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 					<span class="sr-only">Next</span>
 				</a>
-		</div>
+			</div>
 
 		<footer class="container-fluid text-center">
 					<div class="text-center">
@@ -107,7 +141,7 @@
 								></span> Sell</button
 							></a
 						>
-					</form>
+					<!-- </form> -->
 		</footer>
 	</body>
 </html>
