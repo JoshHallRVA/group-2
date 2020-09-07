@@ -2,8 +2,10 @@ var tableArray = [
 	{
 		customerName: "Ahmed",
 		customerEmail: "ahmed@example.com",
-		customerBrand: "afhaque89",
-		phoneNumber: "000-000-0000",
+		customerStyle: "afhaque89",
+		customerBrand: "000-000-0000",
+		customerShoeSize: "9.5 men" ,
+		customerPrice: "$ 15,000 USD"
 	},
 ];
 
