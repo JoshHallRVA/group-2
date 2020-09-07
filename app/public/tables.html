@@ -104,10 +104,12 @@
 					listItem.append(
 						$("<h2>").text("HypBeast! #" + (i + 1)),
 						$("<hr>"),
-						$("<h2>").text("ID: " + tableData[i].customerID),
 						$("<h2>").text("Name: " + tableData[i].customerName),
 						$("<h2>").text("Email: " + tableData[i].customerEmail),
-						$("<h2>").text("Phone: " + tableData[i].phoneNumber)
+						$("<h2>").text("Style: " + tableData[i].customerStyle),
+						$("<h2>").text("Brand: " + tableData[i].customerBrand),
+						$("<h2>").text("ShoeSize: " + tableData[i].customerShoeSize),
+						$("<h2>").text("Price: " + tableData[i].customerPrice)
 					);
 
 					tableList.append(listItem);
