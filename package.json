@@ -1,6 +1,5 @@
 {
 	"name": "group-2",
-
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
@@ -11,7 +10,6 @@
 		"ejs": "^3.1.5",
 		"express": "^4.17.1",
 		"transform": "^1.1.2"
-
 	},
 	"devDependencies": {},
 	"scripts": {
@@ -27,6 +25,4 @@
 		"url": "https://github.com/JoshHallRVA/group-2/issues"
 	},
 	"homepage": "https://github.com/JoshHallRVA/group-2#readme"
-
-	
 }
