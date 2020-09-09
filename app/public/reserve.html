@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>HypeBeast</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="index.html" />
+		<link rel="stylesheet" href="forSale.html" />
+		<!-- <link rel="stylesheet" href="resources.html" /> -->
+		<link rel="stylesheet" type="text/css" href="/app/public/assets/style.css" />
+	</head>
+	<body>
+		<div class="jumbotron">
+			<div class="container text-center">
+				<h1>
+					<img
+						src="https://fontmeme.com/permalink/200827/6de3b13b6bc34814bd6ae29dbc037e4e.png"
+						alt="logo"
+					/>
+				</h1>
+				<p>Your Sneakerhead Headquarters</p>
+			</div>
+		</div>
+
+		<nav
+			class="navbar navbar-inverse"
+			style="background-color: #3e4551"
+		>
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button
+						type="button"
+						class="navbar-toggle"
+						data-toggle="collapse"
+						data-target="#myNavbar"
+					>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div
+					class="collapse navbar-collapse"
+					id="myNavbar"
+					style="background-color: #3e4551"
+				>
+					<ul class="nav navbar-nav">
+						<li class="active"
+							><a href="/" style="background-color: #3e4551"
+								>Home</a
+							></li
+						>
+						<li><a href="/tables">For Sale</a></li>
+						<li><a href="/reserve">Upload Sneakers</a></li>
+						<!-- <li><a href="/resources">Resources</a></li> -->
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#"
+								><span class="glyphicon glyphicon-user"></span> Your Account</a
+							>
+						</li>
+						<li>
+							<a href="#"
+								><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a
+							>
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			body {
+				background-image:url(images/betterArt.jpg);
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				font-family: Verdana, Geneva, Tahoma, sans-serif;
+				margin-top: 40px;
+			}
+
+			.jumbotron {
+				margin-top:0;
+			}
+			.upload {
+				width: 800px;
+				background-color: rgba(5, 14, 97, 0.705);
+				margin:auto;
+				color:rgb(243, 240, 240);
+				padding: 10px 0px 10px 0px;
+				text-align: center;
+				border-radius:15px 15px 0px 0px;
+			}
+			.main {
+				background-color:rgba(28, 41, 161, 0.69) ;
+				width: 800px;
+				margin:auto;
+			}
+
+			form {
+				padding:10px;
+			}
+
+		#name {
+			width:100%;
+			height:100px;
+		}
+		.name, .emailTitle , .shoeSize ,.price, .styleBox, .brandBox {
+			margin-left: 25px;
+			margin-top: 30px;
+			width: 125px;
+			color: white;
+			font-size:18px;
+			font-weight: 500;
+		}
+		h3 {
+			color:white;	
+
+
+		}
+
+		.nameInput {
+		position: relative;
+		left:200px;
+		top:-37px;
+		line-height: 40px;
+		width: 532px;
+		border-radius: 6px;
+		padding:0 22px;
+		font-size: 16px;
+		}
+
+		.email , .styleText, .priceText {
+			position: relative;
+			left:200px;
+			top:-37px;
+			line-height:40px;
+			width:532px;
+			border-radius: 6px;
+			padding: 0 22px;
+			font-size:14px;
+			color: white;
+		}
+	.style {
+			position: relative;
+			line-height:40px;
+			border-radius: 6px;
+			color:white;
+			text-transform: capitalize;
+			font-size:14px;
+			left:48px;
+		
+		}
+
+		.brand {
+			position: relative;
+			color:white;
+			line-height:40px;
+			border-radius: 6px;
+			text-transform: capitalize;
+			font-size:14px;
+			right:25px;
+					
+		} 
+
+		#file-input ,#status{
+			color:white;
+			position: relative;
+			left:200px;
+			
+		}
+
+	</style>
+	 <div class="upload"><h2>Upload Your Sneakers</h2></div>
+	<div class="main">
+		<form action="">
+			<div id="name">
+				<h3 class="name" for="reserve-name">Name</h3>
+				<input type="text" class="form-control"  id="reserve-name"><br>
+			</div>
+
+			<h3 class="emailTitle" for="reserve-email" >Email</h3>
+			<input type="text" class="form-control"  id="reserve-email">
+
+			<div class="row">
+				<div class="col-sm-12 text-center ">
+					<h3 class="text-white" >Shoe Information</h3>
+				</div>
+			</div>
+
+			
+			<div class="row">
+				<div class="col-sm-6">
+					<label for="style" class="styleBox" for="reserve-style">Style</label>
+					<input type="text" class="form-control"  id="reserve-style">
+				</div>
+				<div class="col-sm-6">
+					<label for="brand" class="brandBox" for="reserve-brand">Brand</label>
+					<input type="text" class="form-control"  id="reserve-brand" >
+				</div>
+			</div>
+			
+		
+		
+			<h3 class="shoeSize" for="reserve-shoeSize">Shoe Size</h3>
+			<input type="text" class="form-control"  id="reserve-shoeSize">
+
+			<h3 class="price" for="reserve-price">Price</h3>
+			<input type="text" class="form-control"  id="reserve-price">
+		
+
+			<input type="file" id="file-input" />
+			<p id="status">Please select a file</p>
+
+			<button type="submit" class="btn btn-primary submit">Submit</button>
+					
+		</form>
+	</div> 
+	<script src="./assets/js/uploadSneaks.js"></script>
+</body>
+</html> 
+
+   <!-- Commented out the previous will delete once we are ok with the changes   
+		  <div class="container">
+			<div class="card">
+				<div class="card-header"> Sell Your Shoes!</div>
+				<div class="card-body">
+					<form role="form">
+						<div class="form-group">
+							<label for="reserve-name">Name</label>
+							<input
+								type="text"
+								class="form-control"
+								id="reserve-name"
+							/>
+						</div>
+						<div class="form-group">
+							<label for="reserve-phone">Phone Number</label>
+							<input
+								type="text"
+								class="form-control"
+								id="reserve-phone"
+							/>
+						</div>
+						<div class="form-group">
+							<label for="reserve-email">Email</label>
+							<input
+								type="text"
+								class="form-control"
+								id="reserve-email"
+							/>
+						</div>
+						<div class="form-group">
+							<label for="reserve-unique-id">Unique ID</label>
+							<input
+								type="text"
+								class="form-control"
+								id="reserve-unique-id"
+							/>
+						</div>
+						<button type="submit" class="btn btn-primary submit"
+							>Submit</button
+						>
+					</form>
+					<input type="file" id="file-input" />
+					<p id="status">Please select a file</p>
+				</div>
+			</div>
+			
+				</div>
+			</div>
+		</div>   -->
+		
+		<script src="./assets/js/uploadSneaks.js"></script>
+	</body>
+</html>
+
+<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<script type="text/javascript">
+	// In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+	// In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+	// Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
+	// In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+
+	$(".submit").on("click", function (event) {
+		event.preventDefault();
+
+		// Here we grab the form elements
+		var newReservation = {
+			customerName:  $("#reserve-name").val().trim(),
+			customerEmail: $("#reserve-email").val().trim(),
+			customerStyle: $("#reserve-style").val().trim(),
+			customerBrand: $("#reserve-brand").val().trim(),
+			customerShoeSize: $("#reserve-shoeSize").val().trim(),
+			customerPrice: $("#reserve-price").val().trim(),
+		};
+
+		console.log(newReservation);
+
+		// This line is the magic. It"s very similar to the standard ajax function we used.
+		// Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+		// The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+		// depending on if a tables is available or not.
+
+		$.post("/api/tables", newReservation, function (data) {
+			// If a table is available... tell user they are booked.
+			if (data) {
+				alert("Yay! You are now a HypeBeast!");
+			}
+
+			// If a table is available... tell user they on the waiting list.
+			else {
+				alert("Sorry! There are too many HypeBeasts!");
+			}
+
+			// Clear the form when submitting
+			$("#reserve-name").val("");
+			$("#reserve-email").val("");
+			$("#reserve-style").val("");
+			$("#reserve-brand").val("");
+			$("#reserve-shoeSize").val("");
+			$("#reserve-price").val("");
+		});
+	});
+</script>

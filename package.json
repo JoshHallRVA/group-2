@@ -1,6 +1,5 @@
 {
 	"name": "group-2",
-
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
@@ -8,14 +7,12 @@
 		"aws-sdk": "^2.744.0",
 		"body-parser": "^1.19.0",
 		"dotenv": "^8.2.0",
-		"ejs": "^3.1.5",
 		"express": "^4.17.1",
-		"transform": "^1.1.2"
-
+		"nodemon": "^2.0.4"
 	},
 	"devDependencies": {},
 	"scripts": {
-		"start": "nodemon index.js"
+		"start": "nodemon server.js"
 	},
 	"repository": {
 		"type": "git",
@@ -27,6 +24,4 @@
 		"url": "https://github.com/JoshHallRVA/group-2/issues"
 	},
 	"homepage": "https://github.com/JoshHallRVA/group-2#readme"
-
-	
 }
