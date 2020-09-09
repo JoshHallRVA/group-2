@@ -41,3 +41,4 @@ function uploadFile(file, signedRequest, url) {
     };
     xhr.send(file);
 }
+
