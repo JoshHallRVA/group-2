@@ -1,27 +1,31 @@
-var bodyParser = require("body-parser");
+// *****************************************************************************
+// Server.js - This file is the initial starting point for the Node/Express server.
+//
+// ******************************************************************************
+// *** Dependencies
+// =============================================================
 var express = require("express");
-var path = require("path");
-require("dotenv").config();
 
-const aws = require("aws-sdk");
-aws.config.region = "us-east-2";
-
-// app.engine('html', require('ejs').renderFile);
-
-const S3_BUCKET = process.env.S3_BUCKET;
-
+// Sets up the Express App
+// =============================================================
 var app = express();
+var PORT = process.env.PORT || 3000;
 
-var PORT = process.env.PORT || 3030;
+// Requiring our models for syncing
+var db = require("./models");
 
-app.use(bodyParser.urlencoded({ extended: false }));
+// Sets up the Express app to handle data parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-app.use(bodyParser.json());
-app.use(express.static("./app/public/"));
+// Static directory
+app.use(express.static("public"));
 
-// require("./routes/apiRoutes")(app);
-require("./app/routes/apiRoutes")(app);
-require("./app/routes/htmlRoutes")(app);
+// Routes
+// =============================================================
+require("./routes/html-routes.js")(app);
+require("./routes/author-api-routes.js")(app);
+require("./routes/post-api-routes.js")(app);
 
 app.get("/sign-s3", (req, res) => {
 	const s3 = new aws.S3();
@@ -48,10 +52,10 @@ app.get("/sign-s3", (req, res) => {
 	});
 });
 
-app.post("/save-details", (req, res) => {
-	console.log(req);
-});
-
-app.listen(PORT, function () {
-	console.log("App listening on PORT: " + PORT);
+// Syncing our sequelize models and then starting our Express app
+// =============================================================
+db.sequelize.sync({ force: false }).then(function () {
+	app.listen(PORT, function () {
+		console.log("App listening on PORT " + PORT);
+	});
 });
