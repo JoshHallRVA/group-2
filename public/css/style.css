@@ -1,0 +1,131 @@
+/* Remove the navbar's default rounded borders and increase the bottom margin */
+.navbar {
+	margin-bottom: 50px;
+	border-radius: 0;
+}
+
+/* Remove the jumbotron's default bottom margin */
+.jumbotron {
+	margin-bottom: 0;
+	padding: 2%;
+	margin-top: 0;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+	background-color: #f2f2f2;
+	padding: 25px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-image: url(/images/betterArt.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	margin-top: 40px;
+}
+.upload {
+	width: 800px;
+	background-color: rgba(5, 14, 97, 0.705);
+	margin: auto;
+	color: rgb(243, 240, 240);
+	padding: 10px 0px 10px 0px;
+	text-align: center;
+	border-radius: 15px 15px 0px 0px;
+}
+.main {
+	background-color: rgba(28, 41, 161, 0.69);
+	width: 800px;
+	margin: auto;
+}
+
+form {
+	align-content: center;
+	padding: 10px;
+}
+
+#name {
+	width: 100%;
+	height: 100px;
+}
+.name,
+.emailTitle,
+.shoeSize,
+.price,
+.styleBox,
+.brandBox {
+	margin-left: 25px;
+	margin-top: 30px;
+	width: 125px;
+	color: white;
+	font-size: 18px;
+	font-weight: 500;
+}
+h3 {
+	color: white;
+}
+
+.nameInput {
+	position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 532px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+}
+
+.email,
+.styleText,
+.priceText {
+	position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 532px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 14px;
+	color: white;
+}
+.style {
+	position: relative;
+	line-height: 40px;
+	border-radius: 6px;
+	color: white;
+	text-transform: capitalize;
+	font-size: 14px;
+	left: 48px;
+}
+
+.brand {
+	position: relative;
+	color: white;
+	line-height: 40px;
+	border-radius: 6px;
+	text-transform: capitalize;
+	font-size: 14px;
+	right: 25px;
+}
+
+#file-input,
+#status {
+	color: white;
+	position: relative;
+	left: 200px;
+}
+
+.carousel-inner {
+	width: 100%;
+	max-height: 1000px;
+	padding: 7% 10%;
+}
+#myCarousel {
+	margin-bottom: 1%;
+}
