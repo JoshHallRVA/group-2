@@ -1,12 +1,12 @@
-console.log('hello')
- 
+
 const form = document.getElementById('cms');
-const name = document.getElementById('reserve-name');
+const names = document.getElementById('reserve-name');
 const email = document.getElementById('reserve-email');
 const style = document.getElementById('reserve-style');
 const brand = document.getElementById('reserve-brand');
 const shoeSize = document.getElementById('reserve-shoeSize');
 const price = document.getElementById('reserve-price');
+const img = document.getElementById('file-input');
  
 form.addEventListener('submit', (e) => {
    e.preventDefault();
@@ -15,12 +15,15 @@ form.addEventListener('submit', (e) => {
 });
  
 function checkInputs() {
-   const nameVal = name.value.trim();
+   const nameVal = names.value.trim();
    const emailVal = email.value.trim();
    const styleVal = style.value.trim();
    const brandVal = brand.value.trim();
    const shoeSizeVal = shoeSize.value.trim();
    const priceVal = price.value.trim();
+
+
+
  
    if (emailVal === '') {
        //show error
@@ -33,6 +36,36 @@ function checkInputs() {
    else {
        //add success
        setSuccessFor(email);
+   }
+
+   if (nameVal === ''){
+      setErrorFor(names, 'name cannot be blank');
+   } else {
+      setSuccessFor(names);
+   }
+
+   if (styleVal === ''){
+      setErrorFor(style, 'style cannot be blank');
+   } else {
+      setSuccessFor(style);
+   }
+
+   if (brandVal === ''){
+      setErrorFor(brand, 'brand cannot be blank');
+   } else {
+      setSuccessFor(brand);
+   }
+
+   if (shoeSizeVal === ''){
+      setErrorFor(shoeSize, 'shoe size cannot be blank');
+   } else {
+      setSuccessFor(shoeSize);
+   }
+
+   if (priceVal === ''){
+      setErrorFor(price, 'price cannot be blank');
+   } else {
+      setSuccessFor(price);
    }
 }
  

@@ -161,6 +161,12 @@ h3 {
 	visibility: visible;
 }
 
-.space {
-	border-top: 50px;
+.pic-space {
+	padding-top: 25px;
+}
+
+.left{
+	position: relative;
+	right: 200px;
+	padding-top: 5px;
 }
