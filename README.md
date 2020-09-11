@@ -59,3 +59,8 @@ Are you looking for a great place to buy and sell your one of a kind/rare sneaks
 
 <hr></hr>
 
+<strong>What's in store for Hypebeast in the near future?</strong>
+
+As we continue to become "The Sneakerhead Headquarters", we will collaborate with the hottest vendors in the footwear industry to bring our Beasts the lastest and greatest arrivals by added retail to our site for that one stop shop experience. This will allow you to buy rare finds and the new releases while create frienships with fellow Hypebeast! 
+
+To bring more awareness to the brand we will hosts  Sneaker Conferences by taking the conference on tour to major cities and countries. As we locate the best buyers and traders around the world, we will set up offices in other countries to create a global brand! 
