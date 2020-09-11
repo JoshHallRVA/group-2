@@ -40,6 +40,11 @@ module.exports = function (sequelize, DataTypes) {
 			allowNull: false,
 			len: [1],
 		},
+
+		image: {
+			type: DataTypes.STRING,
+		}
+
 	});
 
 	Post.associate = function (models) {
