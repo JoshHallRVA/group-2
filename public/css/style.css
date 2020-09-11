@@ -129,3 +129,38 @@ h3 {
 #myCarousel {
 	margin-bottom: 1%;
 }
+
+.icon-control i {
+	visibility: hidden;
+}
+
+.icon-control.success input {
+	border-color: #2ecc71
+}
+
+.icon-control.error input {
+	border-color: red
+}
+
+.icon-control .success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.icon-control.error i.fa-exclamation-circle {
+	color: red;
+	visibility: visible;
+}
+
+.icon-control small {
+	visibility: hidden;
+}
+
+.icon-control.error small {
+	color: red;
+	visibility: visible;
+}
+
+.space {
+	border-top: 50px;
+}

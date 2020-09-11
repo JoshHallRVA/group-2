@@ -59,48 +59,76 @@
 		<h2>Upload Your Sneakers</h2>
 	</div>
 	<div class="main">
-		<form id="cms" action="">
-			<div id="name">
+		<form id="cms" action="" method="GET">
+			<div id="name" class="icon-control">
 				<h3 class="name" for="reserve-name">Name</h3>
 				<input type="text" class="form-control" id="reserve-name" />
-				<br/>
+				<br />
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
 			</div>
 
-			<h3 class="emailTitle" for="reserve-email">Email</h3>
-			<input type="text" class="form-control" id="reserve-email" />
+			<div class="icon-control">
+				<h3 class="emailTitle" for="reserve-email">Email</h3>
+				<input type="text" class="form-control" id="reserve-email" />
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>
 
-			<div class="row">
+			<div>
 				<div class="col-sm-12 text-center">
 					<h3 class="text-white">Shoe Information</h3>
 				</div>
 			</div>
 
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-6 icon-control">
 					<label for="style" class="styleBox" for="reserve-style">Style</label>
-
 					<input type="text" class="form-control" id="reserve-style" />
+					<i class="fas fa-check-circle"></i>
+                   <i class="fas fa-exclamation-circle"></i>
+                   <small>Error message</small>
 				</div>
-				<div class="col-sm-6">
+
+
+				<div class="col-sm-6 icon-control">
 					<label for="brand" class="brandBox" for="reserve-brand">Brand</label>
 					<input type="text" class="form-control" id="reserve-brand" />
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error message</small>
 				</div>
 			</div>
 
+			<div class="icon-control">
 			<h3 class="shoeSize" for="reserve-shoeSize">Shoe Size</h3>
 			<input type="text" class="form-control" id="reserve-shoeSize" />
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
 
+		<div class="icon-control">
 			<h3 class="price" for="reserve-price">Price</h3>
 			<input type="text" class="form-control" id="reserve-price" />
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
 
+		<div>
 			<input type="file" id="file-input" />
 			<p id="status">Please select a file</p>
 			<img style="border:1px solid white;width:300px;" id="preview" src="images/sneak-icon.png">
-	
+
 
 			<button type="submit" class="btn btn-secondary submit">Submit</button>
-			
-			<div class="form-group">
+
+		</div>
+
+			<div class="form-group space">
 				<label for="category">Confirm your HypeBeast ID:</label>
 				<select class="custom-select" id="author"> </select>
 			</div>
@@ -109,6 +137,7 @@
 	<footer> </footer>
 
 	<!-- Custom Script -->
+	<script src="js/validation.js" type="text/javascript"></script>
 	<script src="js/cms.js" type="text/javascript"></script>
 	<script src="js/upload.js" type="text/javascript"></script>
 </body>
