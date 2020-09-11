@@ -9,7 +9,7 @@
     };
 })();
 
-function getSignedRequestL(file) {
+function getSignedRequest(file) {
     console.log("requesting credentials", file)
 
     const xhr = new XMLHttpRequest();
@@ -30,19 +30,7 @@ function getSignedRequestL(file) {
     };
     xhr.send();
 }
-async function getSignedRequest(file) {
-    const queryUrl = `/api/sign-s3?file-name=${file.name}&file-type=${file.type}`;
-    try {
-      const response = await fetch(queryUrl, {
-        method: 'GET',
-      });
-      const data = await response.json();
-      upLoadFile(file, data.signedRequest, data.url);
-    } catch (err) {
-      console.log("error", err);
-      alert('Could not get signed URL.');
-    }
-  }
+
 
 function uploadFile(file, signedRequest, url) {
     console.log("uploading file", signedRequest, url)
