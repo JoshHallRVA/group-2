@@ -127,6 +127,8 @@ $(document).ready(function () {
 			color: "White",
 			margin: "10px",
 		});
+
+		var newPostImage = $("<image>").attr("src", post.image);
 		var newPostCardBody = $("<div>");
 		newPostCardBody.addClass("card-body");
 		var newPostBody = $("<p>");
@@ -151,6 +153,7 @@ $(document).ready(function () {
 		newPostCardHeading.css({
 			margin: "50px",
 		});
+		newPostCard.append(newPostImage);
 		newPostCardBody.append(newPostBody);
 		newPostCard.append(newPostCardHeading);
 		newPostCard.append(newPostCardBody);
