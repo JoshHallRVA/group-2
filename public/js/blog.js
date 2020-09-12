@@ -133,9 +133,9 @@ $(document).ready(function () {
 		var newPostImage = $("<img>").attr("src", post.image).addClass("card-img-top");
 		newPostImage.css({
 			float: "right", 
-			margin: "100px 100px 0px 0px",
-			height: "250px",
-			width: "250px",
+			margin: "80px 80px 0px 0px",
+			height: "300px",
+			width: "300px",
 			
 		})
 		var newPostCardBody = $("<div>");
