@@ -169,4 +169,16 @@ h3 {
 	position: relative;
 	right: 200px;	
 }
+.uploading {
+width: 800px;
+	background-color: rgba(5, 14, 97, 0.705);
+	margin: auto;
+	color: blue;
+	padding: 10px 0px 10px 0px;
+	text-align: center;
+	border-radius: 15px 15px 0px 0px;
+}
 
+.hypeb{
+	color:white;
+}
