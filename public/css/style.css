@@ -170,7 +170,7 @@ h3 {
 	right: 200px;	
 }
 .uploading {
-width: 800px;
+    width: 800px;
 	background-color: rgba(5, 14, 97, 0.705);
 	margin: auto;
 	color: blue;
@@ -182,3 +182,4 @@ width: 800px;
 .hypeb{
 	color:white;
 }
+
