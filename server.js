@@ -9,7 +9,6 @@ var express = require("express");
 var path = require("path");
 require("dotenv").config();
 
-
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -30,7 +29,6 @@ app.use(express.static("public"));
 require("./routes/post-api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 require("./routes/author-api-routes.js")(app);
-
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
