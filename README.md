@@ -13,12 +13,10 @@ Live version: https://grpprjct2.herokuapp.com/
 
 
 
-[![Garage Sailor](public/img/garage-sailor.jpg)](https://youtu.be/sVho6BaKim8)
-
 <h2> About HypeBeast</h2>
 Are you looking for a great place to buy and sell your one of a kind/rare sneaks?  Well Say no more!  Welcome to HypeBeast!
 <hr></hr>
-<h2> Why use Garage Sailor? </h2>
+<h2> Why use HypeBeast? </h2>
 
 - Sellers can advertise their rare shoes to a greater audience.
 
@@ -56,6 +54,9 @@ Are you looking for a great place to buy and sell your one of a kind/rare sneaks
 <strong>Express</strong> - Express was chosen for its fast, unopinionated, and minimalist qualities as our web framework for HypeBeast.
 
 <strong>Git</strong> - As with all projects, Git remains invaluable to the creation, development, communication, and support of HypeBeast.
+
+<strong>AWS</strong> - Amazon Web Services is a subsidiary of Amazon providing on-demand cloud computing platforms and was used to store photos.
+
 
 <hr></hr>
 
