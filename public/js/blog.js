@@ -1,29 +1,21 @@
 $(document).ready(function () {
-	/* global moment */
-
-	// blogContainer holds all of our posts
 	var blogContainer = $(".blog-container");
 	var postCategorySelect = $("#category");
-	// Click events for the edit and delete buttons
+
 	$(document).on("click", "button.delete", handlePostDelete);
 	$(document).on("click", "button.edit", handlePostEdit);
-	// Variable to hold our posts
+
 	var posts;
 
-	// The code below handles the case where we want to get blog posts for a specific author
-	// Looks for a query param in the url for author_id
 	var url = window.location.search;
 	var authorId;
 	if (url.indexOf("?author_id=") !== -1) {
 		authorId = url.split("=")[1];
 		getPosts(authorId);
-	}
-	// If there's no authorId we just get all posts as usual
-	else {
+	} else {
 		getPosts();
 	}
 
-	// This function grabs posts from the database and updates the view
 	function getPosts(author) {
 		authorId = author || "";
 		if (authorId) {
@@ -40,7 +32,6 @@ $(document).ready(function () {
 		});
 	}
 
-	// This function does an API call to delete posts
 	function deletePost(id) {
 		$.ajax({
 			method: "DELETE",
@@ -50,7 +41,6 @@ $(document).ready(function () {
 		});
 	}
 
-	// InitializeRows handles appending all of our constructed post HTML inside blogContainer
 	function initializeRows() {
 		blogContainer.empty();
 		var postsToAdd = [];
@@ -59,8 +49,6 @@ $(document).ready(function () {
 		}
 		blogContainer.append(postsToAdd);
 	}
-
-	// This function constructs a post's HTML
 
 	function createNewRow(post) {
 		console.log("post", post);
@@ -119,7 +107,6 @@ $(document).ready(function () {
 		var newPostPrice = $("<h4>");
 		newPostPrice.css({
 			margin: "20px 20px 20px 20px",
-		
 		});
 		var newPostAuthor = $("<h5>");
 		newPostAuthor.text("Written by: " + post.name);
@@ -129,15 +116,15 @@ $(document).ready(function () {
 			margin: "10px",
 		});
 
-// trying to get it into a paragraph 
-		var newPostImage = $("<img>").attr("src", post.image).addClass("card-img-top");
+		var newPostImage = $("<img>")
+			.attr("src", post.image)
+			.addClass("card-img-top");
 		newPostImage.css({
-			float: "right", 
+			float: "right",
 			margin: "80px 80px 0px 0px",
 			height: "300px",
 			width: "300px",
-			
-		})
+		});
 		var newPostCardBody = $("<div>");
 		newPostCardBody.addClass("card-body");
 
@@ -165,7 +152,7 @@ $(document).ready(function () {
 			margin: "50px",
 		});
 		newPostCard.append(newPostImage);
-		// newPostCardBody.append(newPostImage);
+
 		newPostCardBody.append(newPostBody);
 		newPostCard.append(newPostCardHeading);
 		newPostCard.append(newPostCardBody);
@@ -173,19 +160,16 @@ $(document).ready(function () {
 		return newPostCard;
 	}
 
-	// This function figures out which post we want to delete and then calls deletePost
 	function handlePostDelete() {
 		var currentPost = $(this).parent().parent().data("post");
 		deletePost(currentPost.id);
 	}
 
-	// This function figures out which post we want to edit and takes it to the appropriate url
 	function handlePostEdit() {
 		var currentPost = $(this).parent().parent().data("post");
 		window.location.href = "/cms?post_id=" + currentPost.id;
 	}
 
-	// This function displays a message when there are no posts
 	function displayEmpty(id) {
 		var query = window.location.search;
 		var partial = "";
