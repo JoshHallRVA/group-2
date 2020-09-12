@@ -16,10 +16,10 @@
 		"dialect": "mysql"
 	},
 	"production": {
-		"username": "root",
-		"password": null,
-		"database": "database_production",
-		"host": "127.0.0.1",
+		"username": "bb44b5a6f42aef",
+		"password": "41780f82",
+		"database": "heroku_3311b00a971bb09",
+		"host": "us-cdbr-east-02.cleardb.com",
 		"port": 3306,
 		"dialect": "mysql"
 	}
