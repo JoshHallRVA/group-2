@@ -9,6 +9,9 @@ Live version: https://grpprjct2.herokuapp.com/
 <hr></hr>
 
 <h2> Authors </h2>
+Kendall Masterson -https://github.com/mastersonkl
+Josh Hall -https://github.com/JoshHallRVA
+Marcia Paige -https://github.com/mapaige
 
 <hr></hr>
 
