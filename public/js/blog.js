@@ -118,7 +118,8 @@ $(document).ready(function () {
 		});
 		var newPostPrice = $("<h4>");
 		newPostPrice.css({
-			margin: "20px 20px 0px 20px",
+			margin: "20px 20px 20px 20px",
+		
 		});
 		var newPostAuthor = $("<h5>");
 		newPostAuthor.text("Written by: " + post.name);
@@ -128,10 +129,20 @@ $(document).ready(function () {
 			margin: "10px",
 		});
 
-		var newPostImage = $("<image>").attr("src", post.image);
+// trying to get it into a paragraph 
+		var newPostImage = $("<img>").attr("src", post.image).addClass("card-img-top");
+		newPostImage.css({
+			float: "right", 
+			margin: "100px 100px 0px 0px",
+			height: "250px",
+			width: "250px",
+			
+		})
 		var newPostCardBody = $("<div>");
 		newPostCardBody.addClass("card-body");
+
 		var newPostBody = $("<p>");
+
 		newPostName.text(post.name + " ");
 		newPostEmail.text(post.email);
 		newPostStyle.text(post.style);
@@ -154,6 +165,7 @@ $(document).ready(function () {
 			margin: "50px",
 		});
 		newPostCard.append(newPostImage);
+		// newPostCardBody.append(newPostImage);
 		newPostCardBody.append(newPostBody);
 		newPostCard.append(newPostCardHeading);
 		newPostCard.append(newPostCardBody);
